@@ -1,6 +1,6 @@
 df <- read.csv("./COVID-19.csv")
 df$dateRep <- as.Date(df$dateRep,format="%m-%d-%Y")
-US <- subset(df,geoId =="UK" & dateRep >="2020-4-01")
+US <- subset(df,geoId =="US" & dateRep >="2020-4-01")
 str(df)
 
 ## Daily Plot of Cases and DEaths
@@ -20,4 +20,5 @@ plot(US$dateRep,US$CUMCases,type="l",main="Total US Case to date")
 grid(col="black")
 
 US$CUMDeaths <- cumsum(US$deaths)
-plot(US$dateRep,US$CUMDeaths,type="l",amin="Total US Deaths to date")
+plot(US$dateRep,US$CUMDeaths,type="l",main="Total US Deaths to date")
+grid(col="black")
