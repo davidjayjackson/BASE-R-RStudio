@@ -27,7 +27,7 @@ str(DF$date)
 df <- subset(DF,date =="2020-08-22")
 df$new_cases <- sort(df$new_cases,decreasing=TRUE)
 df_cases <-head(df,n=5)
-barplot(new_cases ~state,data=df_cases,main="Top 5 States Ranked by single Day Cases",xlab="Weekly Date",ylab="Cases")
+barplot(new_cases ~state,data=df_cases,main="Top 5 States Ranked by single Day Cases",xlab="(For August 22, 2020)",ylab="Cases")
 grid(col="black")
 
 ```
@@ -35,7 +35,7 @@ grid(col="black")
 df1 <- subset(DF,date =="2020-08-22")
 df1$new_deaths <- sort(df1$new_deaths,decreasing=TRUE)
 df_deaths <-head(df1,n=5)
-barplot(new_deaths ~state,data=df_deaths,main="Top 5 States Rankded by Daily Deaths",xlab="Weekly Date",ylab="Cases")
+barplot(new_deaths ~state,data=df_deaths,main="Top 5 States Rankded by Daily Deaths",xlab="(For August 22,2020)",ylab="Cases")
 grid(col="black")
 ```
 
